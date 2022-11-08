@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <h1>node js</h1>
+    <h1>angular js</h1>
+
+
+    <button onclick="ch()">change color</button>
+    <button onclick="chst()">change style</button>
+    <button onclick="chhborder()">apply border</button>
+    <button onclick="ref()">reset</button>
+
+    <script>
+        var x=document.getElementsByTagName("h1")
+
+        function ch()
+        {
+            var x=document.getElementsByTagName("h1")
+            for(let i=0; i<x.length; i++)
+            {
+              x[i].style.color="aqua"
+            }
+ 
+        }
+
+
+        function chst()
+        {
+            var x=document.getElementsByTagName("h1")
+            for(let i=0; i<x.length; i++)
+            {
+              x[i].style.fontStyle="italic"
+            }
+ 
+        }
+
+        function chhborder()
+        {
+            var x=document.getElementsByTagName("h1")
+            for(let i=0; i<x.length; i++)
+            {
+              x[i].style.border="2px solid red"
+            }
+ 
+        }
+
+        function ref()
+        {
+            location.reload();
+        }
+    </script>
+    
+</body>
+</html>
