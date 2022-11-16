@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            border: 2px solid chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>
+    <script>
+        //target the element.
+        var x=document.getElementById("heading")
+
+        //create the element
+        var tag=document.createElement("h2")
+        tag.textContent="java script"
+        console.log(tag)
+
+        //Add the created element in all the 4 sides
+
+        //synatx:-insertAdjacentElement(InsertPosition,element)
+
+       // x.insertAdjacentElement("beforebegin",tag)//up
+       //x.insertAdjacentElement("afterbegin",tag)//left
+       //x.insertAdjacentElement("afterend",tag)//down
+       //x.insertAdjacentElement("beforeend",tag)//rigth
+
+
+    </script>
+    
+</body>
+</html>

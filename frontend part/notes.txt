@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document Object </h1>
+    <h1>node js</h1>
+    <h1>angular js</h1>
+    <script>
+        var ele=document.getElementsByTagName("*");
+        console.log(ele);
+    </script>
+    
+</body>
+</html>
+
+// note:-the above code targets all the elements present inside the dom tree.
+================================================================================================================================
+
+2.documen.getElementById:-   get ElementById bt id function targets and returns only one particular sepecified element based on id value.
+      
+Example:-1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Document Object </h1>
+    <h1>node js</h1>
+    <h1 id="heading2">angular js</h1>
+    <script>
+        var ele=document.getElementById("heading");
+        console.log(ele);
+    </script>
+    
+</body>
+</html>
+
+Example:-2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading2">Document Object </h1>
+    <h1 id="heading2">node js</h1>
+    <h1 id="heading2">angular js</h1>
+    <script>
+        var ele=document.getElementById("heading2");
+        console.log(ele);
+    </script>
+    
+    
+</body>
+</html>
+
+//note:- with respect to above code both the heading contains the same id value .
+So hence the function targets the first occuring elements with the matching id value.
+=============================================================================================================
+ALERT MESSAGE:-
+      Example:-
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Document Object Model</h1>
+    <button onclick="clk()">click me</button>
+    <script>
+        function clk()
+        {
+            var x=document.getElementById("heading").innerHTML
+            alert(x);
+        }
+    </script>
+    
+</body>
+</html>
+=================================================================================================
+
+note:- dom to click=Document Object model output
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">DOM</h1>
+    <button onclick="x()">change</button>
+    <script>
+        function x()
+        {
+        document.getElementById("heading").innerHTML="Document Object Model"
+        }
+    </script>
+    
+</body>
+</html>
+=======================================================================================
+note:-click on button than output document Object Model colorfull. 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">DOM</h1>
+    <button onclick="x()">change</button>
+    <script>
+        function x()
+        {
+            
+        var c=document.getElementById("heading")
+        c.innerHTML="Document Object Model"
+        c.style.color="red"
+        c.style.border="2px solid green"
+        }
+    </script>
+    
+</body>
+</html>
+=================================================================
+note:-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">DOM</h1>
+    <button onclick="x()" ondblclick="x2()">change</button>
+    <script>
+        function x()
+        {
+            
+        var c=document.getElementById("heading")
+        c.innerHTML="Document Object Model"
+        }
+        function x2()
+        {
+            var c=document.getElementById("heading")
+             c.style.color="red"
+             c.style.textAlign="center"
+             c.style.fontStyle="italic"
+             c.style.border="3px solid blue"
+             c.style.background="aqua"
+        }
+    </script>
+    
+</body>
+</html>
+=============================================================================================================================
+Show output:-
+Select scripting Language
+*JAVA
+*JAVA SCRIPT
+*PYTHON
+*C#
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> select  scripting language</h1>
+    <input type="radio" id="input1" name="r1" value="java">java
+    <br><br>
+
+    <input type="radio" id="input2" name="r1" value="java script">java script
+    <br><br>
+
+    <input type="radio" id="input3" name="r1" value="python">python
+    <br><br>
+
+    <input type="radio" id="input4" name="r1" value="c#">c#
+    <br><br>
+
+    <button onclick="vali()">submit</button>
+
+    <script>
+        function vali()
+        {
+           var x1=document.getElementById("input1")
+           var x2=document.getElementById("input2")
+           var x3=document.getElementById("input3")
+           var x4=document.getElementById("input4")
+
+           if(x1.checked==true)
+           {
+            alert("answer selected is "+x1.value)
+           }
+           else if(x2.checked==true)
+           {
+            alert("answer selected is "+x2.value)
+           }
+           else if(x3.checked==true)
+           {
+            alert("answer selected is "+x3.value)
+           }
+           else if(x4.checked==true)
+           {
+            alert("answer selected is "+x4.value)
+           }
+           else 
+           {
+            alert("no answer is selected")
+           }
+
+        }
+    </script>
+
+
+    
+</body>
+</html>
+===============================================================================================================
+3.Document.getElementsByClassName:=  This function targets and return all the element with matching class value.
+                                     it returns HTML collection object and as to the access to using index value.
+
+
+Example:-1
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="blue">1.JAVA</h1>
+    <h1 class="orange">2.JAVA SCRIPT</h1>
+    <h1 class="orange">3.SPRING</h1>
+    <h1 class="orange">4.REACT</h1>
+    <h1 id="blue">5.HTML</h1>
+    <button>orange</button>
+
+    <script>
+     var x=document.getElementsByClassName("orange")
+     console.log(x)
+    </script>
+    
+</body>
+</html>
+====================================================================================
+Example:-2
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="blue">1.JAVA</h1>
+    <h1 class="orange">2.JAVA SCRIPT</h1>
+    <h1 class="orange">3.SPRING</h1>
+    <h1 class="orange">4.REACT</h1>
+    <h1 id="blue">5.HTML</h1>
+    <button onclick="ch()">orange</button>
+
+    <script>
+      function ch()
+      {
+        var x=document.getElementsByClassName("orange")
+        console.log(x)
+        for(i=0;i<x.length;i++)
+        {
+            x[i].style.color="orange"
+        }
+      }
+    </script>
+    
+</body>
+</html>
+===========================================================================================
+4:-document.Query selectors: qurey selector function is usedto target and element using tag name,id value,class value.
+  
+ in which whichever input available frist that is tag name id value ,class value it returns that particular element.
+
+example:1
+
+         <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <h1 id="js">java script</h1>
+    <h1 class="fw">Spring</h1>
+    <h1 class="fw">Hibernnet</h1>
+
+    <script>
+        var ele1=document.querySelector("h1,#js,.fw")
+        var ele2=document.querySelector("#js,h1,.fw")
+        var ele3=document.querySelector(".fw,h1,#js")
+        console.log(ele1)
+        console.log(ele2)
+        console.log(ele3)
+        
+    </script>
+
+    
+</body>
+</html> 
+===============================================================================
+insertAdjacentelement:=is a function which is capable of tacking two argument.
+1.inserting position
+2.element
+
+Syntax:-insertAdjacentElement(InsertPosition,element)
+
+if we want to add element all they adjacentelement function.
+
+Syntax:- 1.x.insertAdjacentElement("beforebegin",tag)//up
+         2.x.insertAdjacentElement("afterbegin",tag)//left
+         3.x.insertAdjacentElement("afterend",tag)//down
+         4.x.insertAdjacentElement("beforeend",tag)//right
+====================================================================
+Events:
+       event is basically an action perform .
+for respective event handler should be attached.
+  
+    

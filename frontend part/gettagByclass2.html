@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="blue">1.JAVA</h1>
+    <h1 class="orange">2.JAVA SCRIPT</h1>
+    <h1 class="orange">3.SPRING</h1>
+    <h1 class="orange">4.REACT</h1>
+    <h1 id="blue">5.HTML</h1>
+    <button onclick="ch()">orange</button>
+
+    <script>
+      function ch()
+      {
+        var x=document.getElementsByClassName("orange")
+        console.log(x)
+        for(i=0;i<x.length;i++)
+        {
+            x[i].style.color="orange"
+        }
+      }
+    </script>
+    
+</body>
+</html>
